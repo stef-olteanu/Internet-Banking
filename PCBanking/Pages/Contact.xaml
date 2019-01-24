@@ -1,0 +1,81 @@
+﻿<Page x:Class="PCBanking.Contact"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCBanking"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="450"
+      Title="Contact">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="Auto"/>
+
+
+
+        </Grid.RowDefinitions>
+        <!--Titlu + logo-->
+        <StackPanel Orientation="Vertical" Grid.Row="0" VerticalAlignment="Center" Margin="0,0,-0.4,0.4">
+            <TextBlock Text="BATM" 
+                  Background="White"
+                       Height="50"
+                        VerticalAlignment="Center"
+                         HorizontalAlignment="Center"
+                         FontSize="20"
+                         FontWeight="Bold"
+                         FontFamily="Comic Sans MS"
+                       Margin="181,0,179.6,0"/>
+
+        </StackPanel>
+
+        <Grid Grid.Row="1">
+
+
+            <StackPanel>
+                <!-- plus textbox pt nr tel si ccaturi ca sa pot sa dea lumea copy:))  -->
+                <TextBlock Margin="5,10,0,10" FontSize="20" Foreground="Blue"
+                          IsHitTestVisible="True"
+                     TextWrapping="Wrap"    >
+                           Contact
+                </TextBlock>
+
+                <TextBlock  Margin="5,10,-0.4,10" FontSize="15" Foreground="Black" Height="75" TextWrapping="Wrap">
+                    Pentru mai multe detalii, reclamatii sau sugestii va rugam
+                    vizitati pagina web a bancii ATM Bank sau vizitati-ne in una dintre sucursalele
+                    noastre.
+                </TextBlock>
+                <TextBlock  Margin="104,5,121.6,10"  FontSize="15" Foreground="Black" Height="193" TextWrapping="Wrap"><Run Text="Orar de functionare:"/><LineBreak/><Run Text=" Luni: 08:00 - 16:00"/><LineBreak/><Run Text=" Marti: 08:00 - 16:00"/><LineBreak/><Run Text=" Miercuri: 08:00 - 16:00"/><LineBreak/><Run Text=" Joi: 08:00 - 16:00"/><LineBreak/><Run Text=" Vineri: 08:00 - 15:00"/><LineBreak/><Run Text=" Sambata: 09:30 - 12:00"/><LineBreak/><Run Text=" Duminica: Inchis"/><LineBreak/></TextBlock>
+                <TextBlock Margin="0,10,-0.4,10" FontSize="20" Foreground="Red"
+                          IsHitTestVisible="True"
+                           HorizontalAlignment="Right"
+                     TextWrapping="Wrap" Height="44" Width="232"    ><Run Text="Telefon: 0712345698"/></TextBlock>
+
+            </StackPanel>
+
+        </Grid>
+
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Button x:Name="BackButton" Command="{Binding BackComm}" Content="Inapoi" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Margin="20,5,0,0" Grid.Row="2" Height="35" RenderTransformOrigin="0.496,0.085"/>
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <Button x:Name="ExitButton" Command="{Binding ExitComm}" Content="Iesire" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,0" Grid.Row="2" Width="100" Height="35"/>
+            </Grid>
+
+        </Grid>
+
+
+    </Grid>
+</Page>

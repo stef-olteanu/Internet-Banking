@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB070026-D0D0-4222-9691-865E187D39CA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PCBanking</RootNamespace>
+    <AssemblyName>PCBanking</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Handlers\CommandHandler.cs" />
+    <Compile Include="Handlers\DataService.cs" />
+    <Compile Include="Helpers\FAQHelper.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\CardFidelitate.cs" />
+    <Compile Include="Models\Furnizor.cs" />
+    <Compile Include="Models\MasterUser.cs" />
+    <Compile Include="Models\PlataPlanificata.cs" />
+    <Compile Include="Models\PlataPlanificataFurnizor.cs" />
+    <Compile Include="Models\PlataPlanificataUtilizator.cs" />
+    <Compile Include="Models\PlataSalvata.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Pages\Contact.xaml.cs">
+      <DependentUpon>Contact.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CursValutarPage.xaml.cs">
+      <DependentUpon>CursValutarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FAQ.xaml.cs">
+      <DependentUpon>FAQ.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FidelityPage.xaml.cs">
+      <DependentUpon>FidelityPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ForgotPasswordPage.xaml.cs">
+      <DependentUpon>ForgotPasswordPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListaPlatiRecurentePage.xaml.cs">
+      <DependentUpon>ListaPlatiRecurentePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListaPlatiSalvatePage.xaml.cs">
+      <DependentUpon>ListaPlatiSalvatePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlataConturileMelePage.xaml.cs">
+      <DependentUpon>PlataConturileMelePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlataFurnizoriPage.xaml.cs">
+      <DependentUpon>PlataFurnizoriPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlataInLeiPage.xaml.cs">
+      <DependentUpon>PlataInLeiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlatiPage.xaml.cs">
+      <DependentUpon>PlatiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlatiRecurenteFurnizor.xaml.cs">
+      <DependentUpon>PlatiRecurenteFurnizor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PlatiRecurentePage.xaml.cs">
+      <DependentUpon>PlatiRecurentePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiciiPage.xaml.cs">
+      <DependentUpon>ServiciiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Transactions.xaml.cs">
+      <DependentUpon>Transactions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewCardPage.xaml.cs">
+      <DependentUpon>NewCardPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TranzactiiPage.xaml.cs">
+      <DependentUpon>TranzactiiPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="Handlers\IHavePassword.cs" />
+    <Compile Include="ViewModels\ContactViewModel.cs" />
+    <Compile Include="ViewModels\CursViewModel.cs" />
+    <Compile Include="ViewModels\FAQViewModel.cs" />
+    <Compile Include="ViewModels\FidelityViewModel.cs" />
+    <Compile Include="ViewModels\ForgetPasswordViewModel.cs" />
+    <Compile Include="ViewModels\HomePageViewModel.cs" />
+    <Compile Include="ViewModels\ListaPlatiRecurenteViewModel.cs" />
+    <Compile Include="ViewModels\ListaPlatiSalvateViewModel.cs" />
+    <Compile Include="ViewModels\PlataConturileMeleViewModel.cs" />
+    <Compile Include="ViewModels\PlataFurnizoriViewModel.cs" />
+    <Compile Include="ViewModels\PlataInLeiViewModel.cs" />
+    <Compile Include="ViewModels\PlatiRecurenteFurnizorViewModel.cs" />
+    <Compile Include="ViewModels\PlatiRecurenteViewModel.cs" />
+    <Compile Include="ViewModels\PlatiViewModel.cs" />
+    <Compile Include="ViewModels\ServiciiViewModel.cs" />
+    <Compile Include="ViewModels\TransactionsViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="Handlers\PageManager.cs" />
+    <Compile Include="ViewModels\NewCardViewModel.cs" />
+    <Compile Include="ViewModels\RegisterViewModel.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pages\Contact.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CursValutarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\FAQ.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\FidelityPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\ForgotPasswordPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListaPlatiRecurentePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ListaPlatiSalvatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlataConturileMelePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlataFurnizoriPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlataInLeiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlatiPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\PlatiRecurenteFurnizor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\PlatiRecurentePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\ServiciiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Transactions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\NewCardPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\TranzactiiPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Helpers\questions.faq" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes">
+      <Version>2.5.0.1205</Version>
+    </PackageReference>
+    <PackageReference Include="PropertyChanged.Fody">
+      <Version>2.6.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\CarduriFidelitate\catenaback.jpg" />
+    <Resource Include="Resources\CarduriFidelitate\catenafront.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

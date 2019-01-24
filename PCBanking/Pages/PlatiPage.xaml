@@ -1,0 +1,111 @@
+﻿<Page x:Class="PCBanking.PlatiPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PCBanking"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="450"
+      Title="PlatiPage">
+
+    <Page.DataContext>
+        <local:PlatiViewModel/>
+    </Page.DataContext>
+    
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <Grid Background="White">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Home" Command="{Binding Path=HomeCommand}"/>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" Text="Plati" FontSize="30" />
+        </Grid>
+
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Foloseste o plata anterioara" FontSize="15" Margin="5"/>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBox Padding="5" Margin="10,0,10,0" Text="{Binding Path=SearchBar}" Width="300"/>
+                <Button Content="Search" Width="120" Margin="0,0,30,0" Command="{Binding Path=SearchPlata}"/>
+
+            </StackPanel>
+
+            <TextBlock Margin="5" Text="Incepe sa tastezi numele unei plati salvate!" />
+
+
+            <Button BorderBrush="Transparent" Background="Transparent" Focusable="False" Content="{Binding NumePlata }" Command="{Binding ChangePlataSaved}"  Width="400" Height="50" />
+        </StackPanel>
+
+        <!--Grid plata intre conturi + schimb valutar-->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="4"  Text=" Plata intre conturile proprii" Grid.Row="0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Content="Plata intre conturile mele" Margin="10" Command="{Binding Path=PlataConturiCommand}" />
+                <Button Grid.Column="1" Content="Schimb Valutar" Margin="10" Command="{Binding Path=SchimbCommand}" />
+            </Grid>
+        </Grid>
+
+        <!--Grid plati alti destinatari-->
+        <Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="4" Text="Plata catre alti destinatari" Grid.Row="0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Content="Plata in lei" Margin="10" Command="{Binding Path=PlataLeiCommand}"/>
+                <Button Grid.Column="1" Content="Plata Furnizori" Margin="10" Command="{Binding Path=PlataFurnizorCommand}" />
+                <Button Grid.Column="2" Content="Plati Planificate" Margin="10" Command="{Binding Path=PlatiPlanificateCommand}" />
+            </Grid>
+        </Grid>
+
+        <!--Grid Organizare Plati-->
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="4" Text="Plata catre alti destinatari" Grid.Row="0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Content="Platile mele" Margin="10" Command="{Binding Path=PlatileMeleCommand}"/>
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

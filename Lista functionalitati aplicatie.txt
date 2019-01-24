@@ -1,0 +1,17 @@
+Pagina de contact - mai multe agentii Cocos
+Pagina Curs Valutar + calculator valuta   Cocos
+Pagina Carduri de fidelitate Olteanu
+Poza card + list view carduri - numele + numar card:     Dragoi
+	-click -> sold + tranzactii pentru card
+
+Pagina conturi - conturi normale + conturi economii - deschidere conturi  Dragoi
+Pagina setari cont - retrimitere PIN    Cocos
+Pagina servicii - activare/ dezactivare servicii - bani pentru fiecare serviciu Cocos
+Pagina tranzactii : -plati catre alti utilizatori    Olteanu
+		    -plati utilitati + plati recurente
+		    -plati intre carduri / plati intre conturi
+Tabel banci - taxa in functie de banca 
+	    - conturi din banca respectiva
+Notificari - tabel notificari Olteanu
+Pagina FAQ   Dragoi
+
